@@ -5,8 +5,8 @@ resolver = "2"
 [workspace.package]
 authors = ["Gonçalo Rica Pais da Silva <bluefinger@gmail.com>"]
 edition = "2021"
-repository = "https://github.com/Bluefinger/bevy_rand"
-license = "MIT OR Apache-2.0"
+repository = "https://github.com/ka-de/bevy_rand"
+license = "MIT"
 version = "0.7.0"
 rust-version = "1.76.0"
 
@@ -25,7 +25,7 @@ name = "bevy_rand"
 version = { workspace = true }
 edition = { workspace = true }
 authors = { workspace = true }
-description = "A plugin to integrate rand for ECS optimised RNG for the Bevy game engine."
+description = "A plugin to integrate rand for ECS optimized RNG for the Bevy game engine."
 repository = { workspace = true }
 license = { workspace = true }
 keywords = ["game", "bevy", "rand", "rng"]
@@ -62,7 +62,10 @@ serde_derive = { workspace = true, optional = true }
 bevy_prng = { path = "bevy_prng", version = "=0.7" }
 
 [dev-dependencies]
-bevy_prng = { path = "bevy_prng", version = "0.7", features = ["rand_chacha", "wyrand"] }
+bevy_prng = { path = "bevy_prng", version = "0.7", features = [
+  "rand_chacha",
+  "wyrand",
+] }
 rand = "0.8"
 ron = { version = "0.8.0", features = ["integer128"] }
 
